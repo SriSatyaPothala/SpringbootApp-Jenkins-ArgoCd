@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Boot on K8s</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="owner">
+            <span>👩‍🎤 Sri Satya Pothala</span>
+        </div>
+    </header>
+
+    <!-- Main Content Box -->
+    <div class="container">
+        <h1 th:text="${message}">This is a Spring Boot project built using Jenkins and deployed to K8s using ArgoCD.</h1>
+    </div>
+
+    <!-- Technology Box -->
+    <div class="tech-box">
+        <h2>Technologies Used</h2>
+        <div class="tech-logos">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Apache_Maven_logo.svg" alt="Maven">
+            <img src="https://www.jenkins.io/images/logos/jenkins/Jenkins-stop-the-war.svg" alt="Jenkins">
+            <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker">
+            <img src="https://argo-cd.readthedocs.io/en/stable/assets/logo.png" alt="ArgoCD">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" alt="Kubernetes">
+        </div>
+
+        <!-- Architecture Note -->
+        <p class="note">Click on <strong>About</strong> in the menu to see the architecture diagram for this project.</p>
+    </div>
+</body>
+</html>
