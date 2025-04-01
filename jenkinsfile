@@ -26,7 +26,7 @@ pipeline{
         } 
         stage('build docker image and push'){
             environment{
-                DOCKER_IMAGE="sri-satya11/ci-cd:${BUILD_NUMBER}"
+                DOCKER_IMAGE="srisatyap/ci-cd:${BUILD_NUMBER}"
                 REGISTRY_CREDENTIALS=credentials("docker-hub-cred")
             }
             steps{
