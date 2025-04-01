@@ -4,7 +4,7 @@ pipeline{
         // u need jenkins docker pipeline plugin installed and configured in tool management.
         
         docker { 
-             image 'maven:3.9.9-eclipse-temurin-21'
+             image 'srisatyap/mvn-docker-jdk21:latest'
              args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
