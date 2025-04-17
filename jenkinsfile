@@ -1,8 +1,5 @@
 pipeline{
     agent{
-        // for this step to be successful
-        // u need jenkins docker pipeline plugin installed and configured in tool management.
-        
         docker { 
              image 'srisatyap/mvn-docker-jdk21:latest'
              args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
