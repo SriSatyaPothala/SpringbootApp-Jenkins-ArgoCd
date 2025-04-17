@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springbootapp-deploy
+  labels:
+    name: springbootapp-deploy
+    app: frontend
+spec:
+   replicas: 1
+   selector:
+    matchLabels:
+      name: springbootapp
+      tier: frontend
+   template:
+      metadata:
+        name: k8sspringbootapp
+        labels:
+           name: springbootapp
+           tier: frontend
+      spec:
+        containers:
+          - name: myspringbootapp
+            image: srisatyap/ci-cd:12
+            ports:
+              - containerPort: 8080
