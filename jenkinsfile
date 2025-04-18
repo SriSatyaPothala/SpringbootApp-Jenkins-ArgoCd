@@ -43,6 +43,7 @@ pipeline{
                 GIT_USER_NAME = "SriSatyaPothala"
             }
             steps{
+                 checkout scm
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]){
                 sh '''
                     pwd
