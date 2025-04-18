@@ -6,6 +6,12 @@ pipeline{
         }
     }
     stages{
+        stage('checkout'){
+            steps{
+            checkout scm
+            sh 'git --version'
+        }
+        }
         stage('Build Test and Package'){
             steps{
             sh 'mvn clean package'
@@ -43,8 +49,6 @@ pipeline{
                 GIT_USER_NAME = "SriSatyaPothala"
             }
             steps{
-                 checkout scm
-                 sh 'git --version'
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]){
                 sh '''
                     pwd
