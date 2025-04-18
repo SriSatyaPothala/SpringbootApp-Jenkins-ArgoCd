@@ -44,6 +44,7 @@ pipeline{
             }
             steps{
                  checkout scm
+                 sh 'git --version'
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]){
                 sh '''
                     pwd
