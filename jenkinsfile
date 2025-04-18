@@ -37,12 +37,6 @@ pipeline{
                 //dockerImage.push() // docker image object allows you to perform various docker operations
             }
         }
-        stage('git checkout'){
-            steps{
-                //explicitly checkout scm
-                checkout scm
-            }
-        }
         stage('update deployment file'){
             environment{
                 GIT_REPO_NAME = "SpringbootApp-Jenkins-ArgoCd"
