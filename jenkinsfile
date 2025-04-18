@@ -65,8 +65,8 @@ pipeline{
                     git config user.email "srisatyapothala11@gmail.com"
                     git config user.name "SriSatyaPothala"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    sed -i "s/replacetag/${BUILD_NUMBER}/g" SpringbootApp-Jenkins-ArgoCd/manifests/deployment.yaml
-                    git add SpringbootApp-Jenkins-ArgoCd/manifests/deployment.yaml
+                    sed -i "s/replacetag/${BUILD_NUMBER}/g" manifests/deployment.yaml
+                    git add manifests/deployment.yaml
                     git commit -m "Updated deployment.yaml file with new image"
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
                  '''
