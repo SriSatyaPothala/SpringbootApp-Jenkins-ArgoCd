@@ -37,6 +37,12 @@ pipeline{
                 //dockerImage.push() // docker image object allows you to perform various docker operations
             }
         }
+        stage('git checkout'){
+            steps{
+                //explicitly checkout scm
+                checkout scm
+            }
+        }
         stage('update deployment file'){
             environment{
                 GIT_REPO_NAME = "SpringbootApp-Jenkins-ArgoCd"
@@ -45,6 +51,7 @@ pipeline{
             steps{
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]){
                 sh '''
+                    cd 
                     git config user.email "srisatyapothala11@gmail.com"
                     git config user.name "SriSatyaPothala"
                     BUILD_NUMBER=${BUILD_NUMBER}
