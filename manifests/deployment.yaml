@@ -20,6 +20,6 @@ spec:
       spec:
         containers:
           - name: myspringbootapp
-            image: srisatyap/ci-cd:replacetag
+            image: srisatyap/ci-cd:14
             ports:
               - containerPort: 8080
